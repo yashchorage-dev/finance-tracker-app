@@ -1,0 +1,62 @@
+/* 🌞 LIGHT THEME (default) */
+:root {
+  --bg-color: #f5f6fa;
+  --card-bg: #ffffff;
+  --text-color: #1e293b;
+  --muted-text: #64748b;
+  --accent-color: #007bff;
+  --accent-hover: #0056b3;
+  --sidebar-bg: #ffffff;
+  --sidebar-active: #007bff;
+  --sidebar-text: #1e293b;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌙 DARK THEME */
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-color: #e2e8f0;
+  --muted-text: #94a3b8;
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --sidebar-bg: #1e293b;
+  --sidebar-active: #3b82f6;
+  --sidebar-text: #cbd5e1;
+  --shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* 🌈 Global styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 🌐 Universal reusable class for card sections */
+.card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: var(--shadow);
+  border-radius: 12px;
+  padding: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Buttons */
+button {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+

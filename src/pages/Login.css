@@ -1,0 +1,119 @@
+.login-container {
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Ensure full width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background: url("/background4.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* 🔮 Subtle gradient overlay for readability */
+.login-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(10, 20, 60, 0.5), rgba(0, 0, 0, 0.7));
+  z-index: 0;
+}
+
+/* 🧊 Glass card style */
+.login-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 380px;
+  padding: 40px 35px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #fff;
+}
+
+/* 👋 Heading with subtle glow */
+.login-card h2 {
+  color: #00bfff;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
+}
+
+/* Subtext */
+.login-card p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+/* 🔲 Input fields */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-form input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
+}
+
+/* 💙 Glowing button */
+.login-form button {
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.4);
+}
+
+.login-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.7);
+}
+
+/* Footer */
+.login-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.login-footer a {
+  color: #00bfff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-footer a:hover {
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.8);
+}

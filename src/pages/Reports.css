@@ -1,0 +1,111 @@
+/* 🌈 REPORTS PAGE STYLING */
+
+.reports-container {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 30px 40px;
+  color: #222;
+  box-sizing: border-box;
+}
+
+.reports-header {
+  margin-bottom: 25px;
+  border-left: 4px solid #007bff;
+  padding-left: 10px;
+}
+
+.reports-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.reports-header p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ✅ Summary Cards */
+.summary-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.summary-card {
+  background: white;
+  flex: 1 1 250px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card h3 {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.summary-card h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.summary-card:nth-child(1) {
+  border-top-color: #4caf50;
+}
+.summary-card:nth-child(2) {
+  border-top-color: #f44336;
+}
+.summary-card:nth-child(3) {
+  border-top-color: #007bff;
+}
+
+/* ✅ Chart Sections */
+.chart-section {
+  background: white;
+  margin-top: 40px;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.chart-section:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.chart-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* ✅ Chart Responsiveness */
+.recharts-wrapper {
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .reports-container {
+    padding: 20px;
+  }
+
+  .summary-grid {
+    flex-direction: column;
+  }
+
+  .chart-section {
+    padding: 20px;
+  }
+}

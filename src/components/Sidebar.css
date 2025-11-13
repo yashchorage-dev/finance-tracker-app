@@ -1,0 +1,131 @@
+/* 🌙 SIDEBAR STYLING */
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.25);
+  font-family: "Poppins", sans-serif;
+  z-index: 1000;
+}
+
+/* Collapsed state */
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  color: #fff;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  flex: 1;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  padding-left: 25px;
+  color: #fff;
+}
+
+/* Active link */
+.sidebar-link.active {
+  background: rgba(0, 123, 255, 0.2);
+  border-left: 4px solid #007bff;
+  color: #fff;
+}
+
+/* Icons */
+.sidebar-link .icon {
+  font-size: 1.2rem;
+  width: 25px;
+  text-align: center;
+}
+
+/* Collapsed styling */
+.sidebar.collapsed .sidebar-title {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar.collapsed .sidebar-link {
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.sidebar.collapsed .sidebar-link .name {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-link .icon {
+  margin-right: 0;
+}
+
+/* Scrollable sidebar if needed */
+.sidebar-menu {
+  overflow-y: auto;
+}
+
+/* Hide scrollbar */
+.sidebar-menu::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    height: 100%;
+    width: 220px;
+    z-index: 9999;
+  }
+}
