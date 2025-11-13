@@ -181,6 +181,6 @@ You can deploy using:
 
 
 
-## 👨‍💻 Author  
+##  Author  
 **Yash Chorage**  
-Frontend Developer | JavaScript | React
+| JavaScript | React
