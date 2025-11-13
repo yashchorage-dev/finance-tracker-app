@@ -1,16 +1,187 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📊 Finance Tracker App
 
-Currently, two official plugins are available:
+A modern and responsive personal finance management web application built using **React (Vite)** and **Firebase**.  
+This app allows users to securely track income & expenses, view analytics dashboards, generate visual reports, and manage transactions in real time.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ⭐ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔐 Authentication
+- Secure Login & Signup (Firebase Auth)  
+- Forgot Password (email reset link)  
+- Protected Dashboard & Routes  
 
-## Expanding the ESLint configuration
+### 💸 Transactions
+- Add Income & Expense  
+- Real-time syncing with Firestore  
+- Delete transactions instantly  
+- Clean and responsive table UI  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📈 Reports
+- Pie chart (Income vs Expense)  
+- Line chart (Date-wise transaction trends)  
+- Interactive, responsive and dynamic charts  
+
+### 📊 Dashboard Overview
+- Total Income  
+- Total Expense  
+- Balance  
+- Recent Transactions Preview  
+- Beautiful modern UI  
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | React.js + Vite |
+| Styling | Custom CSS |
+| Backend | Firebase Authentication, Firestore |
+| Graphs | Recharts |
+| Routing | React Router v6 |
+| Notifications | React Toastify |
+
+---
+
+## 📁 Folder Structure
+
+```
+finance-tracker-app/
+│── public/
+│── src/
+│   ├── components/
+│   │   ├── Sidebar.jsx
+│   │   ├── ProtectedRoute.jsx
+│   ├── pages/
+│   │   ├── Login.jsx
+│   │   ├── Signup.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Transactions.jsx
+│   │   ├── Reports.jsx
+│   │   ├── Settings.jsx
+│   ├── layouts/
+│   │   ├── SidebarLayout.jsx
+│   ├── firebase.js
+│   ├── App.jsx
+│   ├── main.jsx
+│── .gitignore
+│── package.json
+│── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone Repository
+```sh
+git clone https://github.com/your-username/finance-tracker-app.git
+cd finance-tracker-app
+```
+
+### 2️⃣ Install Dependencies
+```sh
+npm install
+```
+
+---
+
+## 🔥 Firebase Setup
+
+### Create a Firebase Project
+1. Go to **https://console.firebase.google.com**
+2. Create a new Firebase project
+3. Enable **Email/Password Authentication**
+4. Enable **Cloud Firestore**
+5. Copy your Firebase SDK config from *Project Settings*
+
+### Add Firebase Config  
+Paste your config into `src/firebase.js`:
+
+```js
+const firebaseConfig = {
+  apiKey: "YOUR_KEY",
+  authDomain: "YOUR_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_BUCKET",
+  messagingSenderId: "YOUR_ID",
+  appId: "YOUR_APP_ID"
+};
+```
+
+---
+
+## 🔐 Firestore Security Rules
+
+```js
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId}/transactions/{transactionId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}
+```
+
+---
+
+## ▶️ Run in Development
+
+```sh
+npm run dev
+```
+
+Project runs at:
+
+👉 **http://localhost:5173**
+
+---
+
+## 📦 Build for Production
+
+```sh
+npm run build
+```
+
+---
+
+## 🌐 Deployment Options
+You can deploy using:
+
+- Firebase Hosting  
+- Netlify  
+- Vercel  
+- GitHub Pages  
+
+---
+
+## 📸 Screenshots (Add after uploading)
+
+```
+/screenshots
+    ├── login.png
+    ├── dashboard.png
+    ├── transactions.png
+    ├── reports.png
+```
+
+---
+
+## 🤝 Contributing
+Pull requests are welcome. Feel free to open an issue for suggestions or improvements.
+
+---
+
+## 📜 License  
+This project is licensed under the **MIT License**.
+
+---
+
+## 👨‍💻 Author  
+**Yash Chorage**  
+Frontend Developer | JavaScript | React
