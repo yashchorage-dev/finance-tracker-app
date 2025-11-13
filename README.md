@@ -8,12 +8,12 @@ This app allows users to securely track income & expenses, view analytics dashbo
 
 ## ⭐ Features
 
-### 🔐 Authentication
+###  Authentication
 - Secure Login & Signup (Firebase Auth)  
 - Forgot Password (email reset link)  
 - Protected Dashboard & Routes  
 
-### 💸 Transactions
+###  Transactions
 - Add Income & Expense  
 - Real-time syncing with Firestore  
 - Delete transactions instantly  
@@ -33,7 +33,7 @@ This app allows users to securely track income & expenses, view analytics dashbo
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|------------|
@@ -170,17 +170,7 @@ You can deploy using:
     ├── reports.png
 ```
 
----
 
-## 🤝 Contributing
-Pull requests are welcome. Feel free to open an issue for suggestions or improvements.
-
----
-
-## 📜 License  
-This project is licensed under the **MIT License**.
-
----
 
 ## 👨‍💻 Author  
 **Yash Chorage**  
