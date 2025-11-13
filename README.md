@@ -49,27 +49,36 @@ This app allows users to securely track income & expenses, view analytics dashbo
 ## 📁 Folder Structure
 
 ```
-finance-tracker-app/
-│── public/
+finance-tracker/
+│── node_modules/       → dependencies
+│── public/             → static assets (favicon, index.html)
 │── src/
-│   ├── components/
-│   │   ├── Sidebar.jsx
-│   │   ├── ProtectedRoute.jsx
-│   ├── pages/
-│   │   ├── Login.jsx
-│   │   ├── Signup.jsx
-│   │   ├── Dashboard.jsx
-│   │   ├── Transactions.jsx
-│   │   ├── Reports.jsx
-│   │   ├── Settings.jsx
-│   ├── layouts/
-│   │   ├── SidebarLayout.jsx
-│   ├── firebase.js
+│   ├── assets/         → images/icons
+│   ├── components/     → reusable UI components
+│   │      ├── Navbar.jsx
+│   │      ├── Sidebar.jsx
+│   │      ├── ProtectedRoute.jsx
+│   │      └── Sidebar.css
+│   ├── layouts/        → page layout (SidebarLayout.jsx)
+│   ├── pages/          → all route pages
+│   │      ├── Dashboard.jsx
+│   │      ├── Login.jsx
+│   │      ├── Signup.jsx
+│   │      ├── Settings.jsx
+│   │      ├── Reports.jsx
+│   │      └── Transactions.jsx
+│   │
 │   ├── App.jsx
 │   ├── main.jsx
+│   ├── firebase.js
+│   └── index.css
+│
 │── .gitignore
 │── package.json
-│── README.md
+│── vite.config.js
+│── README.md (You will upload)
+│── .env (ignored)
+
 ```
 
 ---
